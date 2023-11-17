@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Search"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+
+    <item
+        android:id="@+id/action_sort_calories"
+        android:title="Sort by Calories"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_sort_fat"
+        android:title="Sort by Fat"
+        app:showAsAction="never"/>
+
+    <!-- Agrega más elementos de menú según sea necesario para otros nutrientes -->
+</menu>
