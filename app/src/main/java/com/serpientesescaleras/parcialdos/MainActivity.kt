@@ -8,13 +8,11 @@ import android.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import com.serpientesescaleras.parcialdos.model.ApiClient
 import com.serpientesescaleras.parcialdos.model.FruitRepository
-import com.serpientesescaleras.parcialdos.model.FruitViewModel
-import com.serpientesescaleras.parcialdos.model.FruitViewModelFactory
+import com.serpientesescaleras.parcialdos.viewModel.FruitViewModel
+import com.serpientesescaleras.parcialdos.viewModel.FruitViewModelFactory
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var fruitViewModel: FruitViewModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,6 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         fruitViewModel.loadFruits()
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)

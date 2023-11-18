@@ -1,7 +1,9 @@
-package com.serpientesescaleras.parcialdos.model
+package com.serpientesescaleras.parcialdos.viewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.serpientesescaleras.parcialdos.model.Fruit
+import com.serpientesescaleras.parcialdos.model.FruitRepository
 
 class FruitViewModel(private val repository: FruitRepository) : ViewModel() {
     private val _fruits = MutableLiveData<List<Fruit>>()

@@ -1,10 +1,11 @@
-package com.serpientesescaleras.parcialdos.model
+package com.serpientesescaleras.parcialdos.view
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.serpientesescaleras.parcialdos.R
+import com.serpientesescaleras.parcialdos.model.Fruit
 
 class FruitAdapter(private val fruits: List<Fruit>) : RecyclerView.Adapter<FruitAdapter.ViewHolder>() {
 

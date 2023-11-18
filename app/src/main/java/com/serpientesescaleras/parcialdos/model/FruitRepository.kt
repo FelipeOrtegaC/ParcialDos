@@ -41,12 +41,12 @@ class FruitRepository(apiService: ApiService) {
                 if (response.isSuccessful) {
                     val sortedList = response.body()?.sortedBy {
                         when (nutrient) {
-                            "calories" -> it.calories
-                            "fat" -> it.fat
-                            "sugar" -> it.sugar
-                            "carbohydrates" -> it.carbohydrates
-                            "protein" -> it.protein
-                            else -> 0.0
+                            "calories" -> it.nutritions.calories as Comparable<Any>
+                            "fat" -> it.nutritions.fat as Comparable<Any>
+                            "sugar" -> it.nutritions.sugar as Comparable<Any>
+                            "carbohydrates" -> it.nutritions.carbohydrates as Comparable<Any>
+                            "protein" -> it.nutritions.protein as Comparable<Any>
+                            else -> 0.0 as Comparable<Any>
                         }
                     }
                     val result = if (ascending) sortedList else sortedList?.reversed()
